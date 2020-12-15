@@ -1,0 +1,27 @@
+{
+  "name":"Clicker",
+  "description":"Моё первое расширение для гугл хром",
+  "version":"1.0",
+  "manifest_version":2,
+  "content_scripts":[
+    {
+      "matches": ["http://laravel.loc/*"],
+      "js":["scripts.js"],
+      "run_at":"document_end"
+    }
+  ],
+  "icons": {
+    "16":"icon.png",
+    "48":"icon.png",
+    "128":"icon.png"
+  },
+  "browser_action":{
+    "default_popup":"popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
